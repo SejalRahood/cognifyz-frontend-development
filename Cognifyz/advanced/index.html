@@ -1,0 +1,201 @@
+<!-- Task 5 API Integration and Task 6 form styling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Admission Form</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('../advanced/imgs/header.png');
+            padding: 50px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            color: #5b3f3a;
+        }
+        
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 0px 0px 0px 30px;
+            float: inline-start;
+        }
+        .logo::before {
+            content: "\f0f8"; /* FontAwesome hospital icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .address{
+            align-items: center;
+            padding: 30px 0px 0px 795px;
+            float: inline-start;
+        }
+        .container {
+            background-color: white;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2{
+            text-align: center;
+            margin-bottom: 10px;
+            color: #5b3f3a;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="email"], input[type="number"], input[type="date"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #d1c6b8;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .inline-group {
+            display: flex;
+            gap: 20px;
+        }
+        .inline-group input {
+            width: 100%;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #a18c7a;
+            color: black;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #5b3f3a;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            .inline-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Cure Clinic</div>
+        <div class="address">
+            <address>4-158/9 5th Cross Road, Sainikpuri, Secunderabad 500094, TS, IND</address>
+            <p>cureclinichospital@gmail.com | www.cureclinic.in | +1800 2340 3483</p>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Hospital Admission Form</h1>
+        <h2>Patient Information</h2>
+        <p>Please provide the following information to submit your application for admission.</p>
+        <form id="admission-form">
+            <div class="form-group inline-group">
+                <div>
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                </div>
+                <div>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" name="birthdate" id="birthdate" required>
+                </div>
+                <div>
+                    <label>Gender:</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="street">Street Address:</label>
+                <input type="text" name="street" id="street" placeholder="Street Address" required>
+            </div>
+
+            <div class="form-group inline-group">
+                <div>
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city" placeholder="City" required>
+                </div>
+                <div>
+                    <label for="state">State:</label>
+                    <input type="text" name="state" id="state" placeholder="State" required>
+                </div>
+                <div>
+                    <label for="pincode">Pincode:</label>
+                    <input type="number" name="pincode" id="pincode" placeholder="Pincode" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="number">Phone Number:</label>
+                <input type="number" name="number" id="number" placeholder="Phone Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="bloodgrp">Blood Group:</label>
+                    <input type="text" name="bloodgrp" id="bloodgrp" placeholder="e.g., B+">
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="reason">Reason for Admission:</label>
+                    <textarea name="reason" id="reason" placeholder="Description" rows="4"></textarea>
+                </div>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

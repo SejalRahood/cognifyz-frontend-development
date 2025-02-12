@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdfdfd;
+}
+.hero-section {
+    background: url('imgs/imagee.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 28rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn-shop {
+    background-color: #ff4081;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+.btn-shop:hover {
+    background-color: #e91e63;
+}
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
+.testimonial {
+    background-color: #fff3f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+}
+.testimonial img {
+    border-radius: 50%;
+    width: 122px;
+    height: 150px;
+}
+.newsletter-section {
+    background-color: #ffebf1;
+    padding: 40px;
+    text-align: center;
+}
+.newsletter-section input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.newsletter-section button {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.newsletter-section button:hover {
+    background-color: #e91e63;
+}
